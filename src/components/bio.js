@@ -13,40 +13,40 @@ export default class Bio extends React.Component {
     // this.tabSelector = this.tabSelector.bind(this)
   }
 
-  // tabSelector(tab) {
-  //   switch (tab) {
-  //     case 'exp':
-  //     this.setState({
-  //       expOpen: true,
-  //       skillsOpen: false,
-  //       aboutMeOpen: false,
-  //     })
-  //       break
-  //
-  //     case 'skills':
-  //     this.setState({
-  //       expOpen: false,
-  //       skillsOpen: true,
-  //       aboutMeOpen: false,
-  //     })
-  //       break
-  //
-  //     case 'aboutMe':
-  //     this.setState({
-  //       expOpen: false,
-  //       skillsOpen: false,
-  //       aboutMeOpen: true,
-  //     })
-  //       break
-  //
-  //     default:
-  //       break
-  //   }
-  // }
+  tabSelector(tab) {
+    switch (tab) {
+      case 'exp':
+      this.setState({
+        expOpen: !this.state.expOpen,
+        skillsOpen: false,
+        aboutMeOpen: false,
+      })
+        break
+
+      case 'skills':
+      this.setState({
+        expOpen: false,
+        skillsOpen: !this.state.skillsOpen,
+        aboutMeOpen: false,
+      })
+        break
+
+      case 'aboutMe':
+      this.setState({
+        expOpen: false,
+        skillsOpen: false,
+        aboutMeOpen: !this.state.aboutMeOpen,
+      })
+        break
+
+      default:
+        break
+    }
+  }
   renderExperience() {
     return (
       <div className="bio-blurb">
-        <h1 onClick={() => this.setState({expOpen: !this.state.expOpen})}>
+        <h1 onClick={() => this.tabSelector('exp')}>
           Experience
         </h1>
         <Collapse in={this.state.expOpen}>
@@ -55,29 +55,45 @@ export default class Bio extends React.Component {
             <br/>
             <br/>
             Current Learner @ Learners Guild in the heart of Downtown Oakland.<br/>
-            I say Hella.<br/>
-            Batman goes stuey.<br/>
+            Weekly code sprints!<br/>
+            <br/>
           </p>
         </Collapse>
       </div>
     )
   }
 
+
   renderSkills() {
     return (
       <div className="bio-blurb">
-        <h1 onClick={() => this.setState({skillsOpen: !this.state.skillsOpen})}>
+        <h1 onClick={() => this.tabSelector('skills')}>
           Skills
         </h1>
-        <Collapse in={this.state.skillsOpen}>
-          <p>
-            FullStack Web Developer
-            <br/>
-            <br/>
-            Current Learner @ Learners Guild in the heart of Downtown Oakland.<br/>
-            I say Hella.<br/>
-            Batman goes stuey.<br/>
-          </p>
+        <Collapse in={this.state.skillsOpen} className="bio-text">
+          <ul>
+            <li>
+              React
+            </li>
+            <li>
+              Express
+            </li>
+            <li>
+              ES6
+            </li>
+            <li>
+              CSS3
+            </li>
+            <li>
+              HTML5
+            </li>
+            <li>
+              SQL
+            </li>
+            <li>
+              MongoDB
+            </li>
+          </ul>
         </Collapse>
       </div>
     )
@@ -86,17 +102,12 @@ export default class Bio extends React.Component {
   renderAboutMe() {
     return (
       <div className="bio-blurb">
-        <h1 onClick={() => this.setState({aboutMeOpen: !this.state.aboutMeOpen})}>
+        <h1 onClick={() => this.tabSelector('aboutMe')}>
           About Me
         </h1>
-        <Collapse in={this.state.aboutMeOpen}>
+        <Collapse in={this.state.aboutMeOpen} >
           <p>
-            FullStack Web Developer
-            <br/>
-            <br/>
-            Current Learner @ Learners Guild in the heart of Downtown Oakland.<br/>
-            I say Hella.<br/>
-            Batman goes stuey.<br/>
+            Bay Area native with a passion for ones and zeros.
           </p>
         </Collapse>
       </div>
@@ -107,7 +118,7 @@ export default class Bio extends React.Component {
     return (
       <div className="bio-profile-pic">
         <Col xs={6} md={4}>
-          <Image circle responsive src="../../assets/profile_pic.jpg"/>
+          <Link to="/"><Image circle responsive src="../../assets/profile_pic.jpg"/></Link>
         </Col>
       </div>
     )

@@ -1,5 +1,6 @@
 html, #mount, .default-container {
   height: 100%;
+  width: 100%;
 }
 body {
   background-color: rgb(50,50,50);
@@ -33,3 +34,7 @@ body {
 @import 'stylesheets/home';
 @import 'stylesheets/bio';
 @import 'stylesheets/footer';
+@import 'stylesheets/oss';
+@import 'stylesheets/calc_clone';
+@import 'stylesheets/tweet_regen';
+@import 'stylesheets/bat';
