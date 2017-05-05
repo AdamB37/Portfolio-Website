@@ -6,13 +6,11 @@ import {
 } from './global_imports'
 
 
-const App = () => (
-  <div>
-    <Button bsSize="large" bsStyle="primary">Finally</Button>
-  </div>
-)
+import './src/app.scss'
+
+import App from './src/app.js'
 
 render (
-  <App/>,
+  <App />,
   document.getElementById("mount")
 )
