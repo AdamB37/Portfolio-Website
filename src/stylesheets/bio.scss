@@ -4,7 +4,15 @@ h1 {
   font-family: Lobster;
 }
 
+h1:hover {
+  cursor: pointer;
+}
 
+
+.bio-text {
+  text-align: left;
+  margin-left: 30%
+}
 
 .bio-container {
   display: flex;

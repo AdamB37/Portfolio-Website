@@ -2,7 +2,25 @@
   color: rgb(250,250,100);
 }
 
+.navbar-inverse .navbar-brand:hover {
+  color: rgb(250,250,100);
+  cursor: default;
+}
+
 .name-link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.project-link {
+  color: #9d9d9d;
+}
+.project-link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.project-link:focus {
   color: white;
   text-decoration: none;
 }

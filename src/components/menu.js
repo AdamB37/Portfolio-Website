@@ -23,11 +23,12 @@ export default class Menu extends React.Component {
             <Navbar.Brand>Projects</Navbar.Brand>
           </Navbar.Header>
           <Nav>
-            <NavItem>Tweet Regenerator</NavItem>
-            <NavItem>quicklyMD</NavItem>
+            <NavItem><Link to="/tweet" className="project-link">Tweet Regenerator</Link></NavItem>
+            <NavItem><Link to="/calc" className="project-link">Mac Calculator</Link></NavItem>
+            <NavItem><Link to="/oss" className="project-link">OSS Contributions</Link></NavItem>
           </Nav>
           <Nav pullRight>
-            <NavItem><Link to="/" className="name-link">Adam Beshir</Link></NavItem>
+            <NavItem><Link to="/main" className="name-link">Adam Beshir</Link></NavItem>
           </Nav>
         </Navbar>
         <div>
