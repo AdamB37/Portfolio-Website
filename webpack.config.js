@@ -9,7 +9,7 @@ module.exports = {
   },
   module: {
     loaders: [{
-        test: /\.jsx?$/,
+        test: /\.jsx?$|\.css$/,
         loader: 'babel-loader',
         query: {
           presets:['env','react']
@@ -17,7 +17,9 @@ module.exports = {
         include: [
           path.resolve(__dirname, 'public')
         ],
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        'style?sourceMap',
+        'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]'
     }]
   },
 }
