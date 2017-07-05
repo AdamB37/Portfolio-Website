@@ -18,9 +18,13 @@
   "bugs": {
     "url": "https://github.com/AdamB37/Portfolio-Website/issues"
   },
+  "engines": {
+    "node": "7.9.0"
+  },
   "homepage": "https://github.com/AdamB37/Portfolio-Website#readme",
   "dependencies": {
     "elemental": "^0.6.1",
+    "express": "^4.15.3",
     "file-loader": "^0.11.1",
     "history": "^4.6.1",
     "html-webpack-plugin": "^2.28.0",

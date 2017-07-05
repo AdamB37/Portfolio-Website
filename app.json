@@ -1,0 +1,8 @@
+{
+  "name": "Portfolio-Website",
+  "description": "single page react app portfolio website",
+  "repository": "https://github.com/AdamB37/Portfolio-Website",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["react"],
+  "image": "heroku/nodejs"
+}
