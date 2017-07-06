@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve:dev": "webpack-dev-server --open --hot --env dev",
     "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
-    "start": "node ./src/app.js",
+    "start": "babel-node ./src/app.js",
     "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
   },
   "repository": {
@@ -26,7 +26,6 @@
   "homepage": "https://github.com/AdamB37/Portfolio-Website#readme",
   "dependencies": {
     "babel": "^6.23.0",
-    "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
@@ -57,7 +56,6 @@
     "webpack": "^2.4.1"
   },
   "devDependencies": {
-    "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
